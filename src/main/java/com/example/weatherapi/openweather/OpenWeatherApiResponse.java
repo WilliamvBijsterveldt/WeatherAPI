@@ -1,12 +1,11 @@
-package com.example.weatherapi.weather;
+package com.example.weatherapi.openweather;
 
-public class WeatherApiResponse {
+public class OpenWeatherApiResponse {
 
     private Coordinate coord;
     private Weather[] weather;
-    private Cloud clouds;
+    private Clouds clouds;
     private Main main;
-    private Root root;
     private Sys sys;
     private Wind wind;
 
@@ -26,28 +25,12 @@ public class WeatherApiResponse {
         this.weather = weather;
     }
 
-    public Cloud getCloud() {
-        return cloud;
-    }
-
-    public void setCloud(Cloud cloud) {
-        this.cloud = cloud;
-    }
-
     public Main getMain() {
         return main;
     }
 
     public void setMain(Main main) {
         this.main = main;
-    }
-
-    public Root getRoot() {
-        return root;
-    }
-
-    public void setRoot(Root root) {
-        this.root = root;
     }
 
     public Sys getSys() {
@@ -64,5 +47,13 @@ public class WeatherApiResponse {
 
     public void setWind(Wind wind) {
         this.wind = wind;
+    }
+
+    public Clouds getClouds() {
+        return clouds;
+    }
+
+    public void setClouds(Clouds clouds) {
+        this.clouds = clouds;
     }
 }
